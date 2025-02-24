@@ -54,6 +54,10 @@ m_per = per.merge(m_per,on='code',how='right')
 # %% [markdown]
 # ## Tratamiento
 
+# Lectura de archivos csv con columnas del dataset
+df_cols = pd.read_csv('configs/columnas_con_exposicion.csv',header=None, names=['columnas'])
+columnas_nombres = list(df_cols['columnas'].values)
+
 # %%
 var_list = m_per[m_per['categoria']=='Acciones Acoso Declarado']
 var_list = var_list['code'].sort_values()
