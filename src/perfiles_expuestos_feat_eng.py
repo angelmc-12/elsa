@@ -55,7 +55,7 @@ m_per = per.merge(m_per,on='code',how='right')
 # ## Tratamiento
 
 # Lectura de archivos csv con columnas del dataset
-df_cols = pd.read_csv('configs/columnas_con_exposicion.csv',header=None, names=['columnas'])
+df_cols = pd.read_csv(f'{work_dir}/configs/columnas_con_exposicion.csv',header=None, names=['columnas'])
 columnas_nombres = list(df_cols['columnas'].values)
 
 df_tmp1 = df_tmp1[columnas_nombres].copy()
@@ -127,7 +127,7 @@ var_list = [col for col in dfper.columns if 'case_' in col]
 df_tmp1[var_list] = df_tmp1[var_list].fillna('No aplica')
 
 # %%
-df_tmp1 = df_tmp1.drop(['bad_010'],axis=1)
+# df_tmp1 = df_tmp1.drop(['bad_010'],axis=1)
 
 # %%
 temporal = pd.DataFrame(df_tmp1.isnull().sum(),columns=['n_missing'])
@@ -308,3 +308,4 @@ tmp.columns = ['var','nmiss']
 tmp = tmp.sort_values('nmiss',ascending=True)
 tmp = tmp.reset_index(drop=True)
 # OK
+print('proceso de expuestos fead eng terminado')
