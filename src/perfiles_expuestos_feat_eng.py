@@ -33,10 +33,10 @@ info_ad = [columna for columna in tmp['variable'] if columna.startswith('ad')]
 info_act = [columna for columna in tmp['variable'] if columna.startswith('act')]
 
 # %%
-df_tmp1 = df_tmp1.drop(unicat+['measurement_process_id']+info_per+info_ad+info_lab+info_act,axis=1)
+# df_tmp1 = df_tmp1.drop(unicat+['measurement_process_id']+info_per+info_ad+info_lab+info_act,axis=1)
 
 # %%
-df_tmp1 = df_tmp1.drop(columns=['Acoso_Tecnico','Testigo_Tecnico','Acoso_Declarado','Testigo_Declarado','Acoso_Total','Testigo_Total','target'])
+# df_tmp1 = df_tmp1.drop(columns=['Acoso_Tecnico','Testigo_Tecnico','Acoso_Declarado','Testigo_Declarado','Acoso_Total','Testigo_Total','target'])
 
 # %% [markdown]
 # # Tratamiento de missing
@@ -57,6 +57,8 @@ m_per = per.merge(m_per,on='code',how='right')
 # Lectura de archivos csv con columnas del dataset
 df_cols = pd.read_csv('configs/columnas_con_exposicion.csv',header=None, names=['columnas'])
 columnas_nombres = list(df_cols['columnas'].values)
+
+df_tmp1 = df_tmp1[columnas_nombres].copy()
 
 # %%
 var_list = m_per[m_per['categoria']=='Acciones Acoso Declarado']
