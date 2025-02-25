@@ -120,8 +120,6 @@ df_rev1['segmento'] = cluster_labels
 # %%
 plt.pie(df_rev1['segmento'].value_counts().values,labels=df_rev1['segmento'].value_counts().index)
 plt.show()
-
-exit()
 # %% [markdown]
 # # Graficando resultados
 

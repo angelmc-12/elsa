@@ -55,17 +55,21 @@ m_per = per.merge(m_per,on='code',how='right')
 
 # %% [markdown]
 # ## Tratamiento
+df_cols = pd.read_csv(f'{work_dir}/configs/columnas_sin_exposicion.csv',header=None, names=['columnas'])
+columnas_nombres = list(df_cols['columnas'].values)
+
+df_tmp1 = df_tmp1[columnas_nombres].copy()
 
 # %%
-df_tmp1['pl_001'] = df_tmp1['pl_001'].fillna('No aplica')
+# df_tmp1['pl_001'] = df_tmp1['pl_001'].fillna('No aplica')
 
-df_tmp1 = df_tmp1.drop(columns=['pl_001'])
+# df_tmp1 = df_tmp1.drop(columns=['pl_001'])
 
 # %%
-var_list = [col for col in dfper.columns if 'case_' in col]
-df_tmp1[var_list] = df_tmp1[var_list].fillna('No aplica')
+# var_list = [col for col in dfper.columns if 'case_' in col]
+# df_tmp1[var_list] = df_tmp1[var_list].fillna('No aplica')
 
-df_tmp1 = df_tmp1.drop(columns=var_list)
+# df_tmp1 = df_tmp1.drop(columns=var_list)
 
 # %% [markdown]
 # ### Analizando correlacion de casos con otras variables
@@ -139,7 +143,7 @@ def cat_to_dummies(df,columna):
     unique_cats = list(df[f'{columna}'].unique())
     unique_dict = dict(zip(unique_cats,[f'{columna}_{i}' for i in range(len(unique_cats))]))
     out = pd.get_dummies(df[f'{columna}']).rename(columns=unique_dict)
-    print(unique_dict)
+    # print(unique_dict)
     return out
 
 # %%
