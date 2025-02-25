@@ -69,6 +69,11 @@ df_rev1['segmento'] = cluster_labels
 
 print('proceso de no expuestos terminado')
 
+# print('Dataframe con segmentos de perfiles no expuestos')
+# print(df_rev1.head())
+
+df_rev1.to_csv(f'{work_dir}/data/processed/segmentos_no_expuestos.csv')
+
 exit()
 # %%
 # df_rev1['segmento'].value_counts()

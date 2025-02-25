@@ -114,6 +114,11 @@ df_rev1 = dfper[dfper['target'].isin([1,2])].copy()
 # %%
 df_rev1['segmento'] = cluster_labels
 
+# print('Dataframe con segmentos de perfiles expuestos')
+# print(df_rev1.head())
+
+df_rev1.to_csv(f'{work_dir}/data/processed/segmentos_expuestos.csv')
+
 # %%
 # df_rev1['segmento'].value_counts()
 
