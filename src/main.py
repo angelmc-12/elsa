@@ -11,6 +11,7 @@ from sklearn.manifold import MDS,TSNE
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
+import joblib
 # import prince
 # from yellowbrick.cluster import KElbowVisualizer
 from pathlib import Path

@@ -1,6 +1,15 @@
 # %%
-scaler = StandardScaler()
-df_scaled1 = scaler.fit_transform(df_tmp1)
+# scaler = StandardScaler()
+scaler = joblib.load(f'{work_dir}/outputs/models/standard_scaler_expuestos.pkl')
+
+df_cols = pd.read_csv(f'{work_dir}/configs/orden_columnas_scaler_expuestos.csv',header=0)
+columnas_nombres = list(df_cols['variables'].values)
+
+df_scaled1 = scaler.transform(df_tmp1[columnas_nombres])
+
+print('lectura y transformacion de expuestos OK')
+
+exit()
 
 # %%
 kpca = KernelPCA(n_components=2, kernel='cosine', gamma=0.1,random_state=0)

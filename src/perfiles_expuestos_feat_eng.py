@@ -150,7 +150,7 @@ def cat_to_dummies(df,columna):
     unique_cats = list(df[f'{columna}'].unique())
     unique_dict = dict(zip(unique_cats,[f'{columna}_{i}' for i in range(len(unique_cats))]))
     out = pd.get_dummies(df[f'{columna}']).rename(columns=unique_dict)
-    print(unique_dict)
+    # print(unique_dict)
     return out
 
 # %%
