@@ -62,7 +62,12 @@ pip install -r requirements.txt
 
 ## Ejecucion del proyecto
 
-Para ejecutar el flujo completo, coloca los archivos de encuestas en `data/raw/` y ejecuta:
+Para ejecutar el flujo completo, coloca los archivos de encuestas en `data/raw/`, asegurate de que tengan los siguientes nombres:
+
+- **`Encuesta_organizacional_2023.csv`**
+- **`Encuesta_personas_2023.csv`**
+
+Y ejecuta:
 
 ```sh
 python src/main.py
