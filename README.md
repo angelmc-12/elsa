@@ -15,9 +15,9 @@ git clone https://github.com/angelmc-12/elsa.git
 Una vez clonado el repositorio, navega dentro de la carpeta del proyecto con:
 
 ```sh
-cd nombre-del-repositorio
+cd elsa
 ```
 
 # Contacto
 
-Si tienes alguna pregunta o sugerencia, no dudes en crear un issue en el repositorio o contactarme a través de [tu correo o redes sociales].
+Si tienes alguna pregunta o sugerencia, no dudes en crear un issue en el repositorio o contactarme a través de mariomarceloromeroleyva@gmail.com o angelmaytacoaguila@gmail.com.
