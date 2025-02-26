@@ -19,6 +19,8 @@ El proyecto está organizado en las siguientes carpetas:
 
 Para ejecutar el flujo completo, asegúrate de colocar los archivos de encuestas en `data/raw/` y ejecutar `main.py`.
 
+# Ejecucion de la segmentacion
+
 A continuación, se explican los pasos para descargar el proyecto completo utilizando la terminal.
 
 ## Clonar el repositorio
