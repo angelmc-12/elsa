@@ -27,7 +27,7 @@ A continuación, se explican los pasos para descargar el proyecto completo utili
 
 Primero, debes tener git instalado en tu máquina, puedes hacerlo desde la página oficial: https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git
 
-También es recomendable instalar Microsoft Visual Studio Build Tolls: https://visualstudio.microsoft.com/visual-cpp-build-tools/
+También es recomendable instalar Microsoft Visual Studio Build Tools: https://visualstudio.microsoft.com/visual-cpp-build-tools/
 
 Luego, para descargar este proyecto, abre la terminal y ejecuta el siguiente comando:
 
