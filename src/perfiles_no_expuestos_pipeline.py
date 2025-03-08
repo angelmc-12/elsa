@@ -2,7 +2,7 @@ exec(open(f"{work_dir}/src/perfiles_no_expuestos_feat_eng.py").read())
 
 exec(open(f"{work_dir}/src/perfiles_no_expuestos_clustering.py").read())
 
-exec(open(f"{work_dir}/Reporting/perfiles_no_expuestos_reporting.py").read())
+exec(open(f"{work_dir}/reporting/code/perfiles_no_expuestos_reporting.py").read())
 
 
 # %% [markdown]
