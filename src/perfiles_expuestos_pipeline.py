@@ -2,7 +2,7 @@ exec(open(f"{work_dir}/src/perfiles_expuestos_feat_eng.py").read())
 
 exec(open(f"{work_dir}/src/perfiles_expuestos_clustering.py").read())
 
-# exec(open(f"{work_dir}/Reporting/perfiles_expuestos_reporting.py").read())
+exec(open(f"{work_dir}/Reporting/perfiles_expuestos_reporting.py").read())
 
 # Generar variable de acoso total (indique quien es declarado y quien es tecnico)
 
