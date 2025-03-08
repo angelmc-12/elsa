@@ -25,7 +25,11 @@ A continuación, se explican los pasos para descargar el proyecto completo utili
 
 ## Clonar el repositorio
 
-Para descargar todo el proyecto, abre la terminal y ejecuta el siguiente comando:
+Primero, debes tener git instalado en tu máquina, puedes hacerlo desde la página oficial: https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git
+
+También es recomendable instalar Microsoft Visual Studio Build Tolls: https://visualstudio.microsoft.com/visual-cpp-build-tools/
+
+Luego, para descargar este proyecto, abre la terminal y ejecuta el siguiente comando:
 
 ```sh
 git clone https://github.com/angelmc-12/elsa.git
@@ -41,13 +45,9 @@ cd elsa
 
 ## Instalación de Dependencias
 
-Antes de ejecutar el proyecto, asegúrate de instalar las librerías necesarias. Para ello, abre una terminal y ejecuta el siguiente comando:
+Antes de ejecutar el proyecto, asegúrate de instalar Python (mínimo versión 3.0) y las librerías necesarias. Para instalar Python, puedes hacerlo desde la página oficial: https://www.python.org/downloads/
 
-```sh
-pip install -r requirements.txt
-```
-
-Si utilizas un entorno virtual, puedes activarlo antes de instalar las dependencias:
+Se recomienda utilizar un entorno virtual (venv), puedes activarlo antes de instalar las dependencias. Para ello, abre una terminal y ejecuta los siguiente comandos, para creación y activación:
 
 ```sh
 # En Windows
@@ -59,7 +59,9 @@ python3 -m venv venv
 source venv/bin/activate
 
 # Instalar dependencias
-pip install -r requirements.txt
+cd elsa
+pip install scipy --prefer-binary
+pip install -r requirements.txt 
 ```
 
 ## Ejecucion del proyecto
